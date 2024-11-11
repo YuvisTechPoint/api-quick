@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .template-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .template {
+            width: 30%;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .template img {
+            width: 100%;
+            height: auto;
+        }
+        .template-info {
+            padding: 15px;
+        }
+        .template-info h3 {
+            margin-top: 0;
+        }
+        .choose-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .choose-btn:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .template {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Quick Resume</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Create Resume</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Choose Your Resume Template</h1>
+            <p>Select from our professionally designed templates to create your perfect resume.</p>
+        </header>
+
+        <div class="template-container">
+            <div class="template">
+                <img src="template1.jpg" alt="Professional Template">
+                <div class="template-info">
+                    <h3>Professional Template</h3>
+                    <p>A clean and modern design suitable for most industries.</p>
+                    <button class="choose-btn" onclick="loadTemplate('template1.html')">Choose This Template</button>
+                </div>
+            </div>
+
+            <div class="template">
+                <img src="template2.jpg" alt="Creative Template">
+                <div class="template-info">
+                    <h3>Creative Template</h3>
+                    <p>A stylish and creative design for those in creative fields.</p>
+                    <button class="choose-btn" onclick="loadTemplate('template2.html')">Choose This Template</button>
+                </div>
+            </div>
+
+            <div class="template">
+                <img src="template3.jpg" alt="Modern Template">
+                <div class="template-info">
+                    <h3>Modern Template</h3>
+                    <p>A sleek and modern design for a contemporary look.</p>
+                    <button class="choose-btn" onclick="loadTemplate('template3.html')">Choose This Template</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Quick Resume. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function loadTemplate(templateName) {
+            // Redirect to the selected template
+            window.location.href = templateName;
+        }
+    </script>
+</body>
+</html>

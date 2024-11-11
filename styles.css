@@ -1,0 +1,850 @@
+:root {
+  /* Define your global CSS variables here */
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --background-color: #f4f6f9;
+  --text-color: #333;
+  --font-family: 'Solway', serif;
+}
+
+/* Existing code starts here */
+.home-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--font-family);
+    position: absolute;
+    top: 90px;
+    right: 20%;
+}
+
+.home-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0;
+    padding-top: 60px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* icon */
+.icon {
+  width: 25px;  
+  margin-right:6px;
+  opacity: 10;
+  }
+  
+  /* Container Layout */
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+  }
+  
+  header {
+  /* Enables flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    justify-content: flex-start; /* Aligns items to the left */
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: #fff;
+  }
+  
+  header img {
+    width: 150px; /* Fixed width for the logo */
+    height: 150px; /* Maintain aspect ratio */
+  }
+  
+  header h1 {
+    text-align: endjustify; /* Centers the header text */
+    font-size: 3.5rem;
+    color: #007bff;
+    margin: 0; /* Removes default margin */
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0 0; /* Removes default margin */
+  }
+  
+  h2, h3 {
+    color: #444;
+  }
+  
+  /* Card Section Styling Personal Information */
+  section.card {
+    margin-bottom: 30px;
+    padding: 20px 10%;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+  }
+  
+  .card-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  .card-content input[type="text"], 
+  .card-content input[type="email"], 
+  .card-content input[type="number"],
+  .card-content input[type="date"],
+  .card-content textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  /* Work Experience Entry */
+  .work-experience-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .work-experience-entry input {
+    width: calc(33% - 10px);
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Remove Button Styling */
+  .remove-btn {
+    padding: 8px 12px;
+    background-color: #ff4d4d; /* Red color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .remove-btn:hover {
+    background-color: #e60000; /* Darker red on hover */
+  }
+  
+  /* Fresher Experience Section */
+  .fresher-section {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .fresher-section h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .fresher-experience-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .fresher-experience-entry input,
+  .fresher-experience-entry textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .fresher-experience-entry textarea {
+    resize: vertical;
+    height: 80px;
+  }
+  
+  /* Button Styling */
+  button.add-btn, 
+  button.generate-btn, 
+  button.download-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+  }
+  
+  button.add-btn:hover, 
+  button.generate-btn:hover, 
+  button.download-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Education Entry */
+  .education-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .education-entry input {
+    width: calc(33% - 10px); /* Each input takes up one-third of the width */
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Remove Button Styling */
+  .education-remove-btn {
+    padding: 8px 12px;
+    background-color: #ff4d4d; /* Red color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  /* Project Entry */
+  .project-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .project-entry input {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .project-entry textarea {
+    width: calc(100% - 10px);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allows vertical resizing of textarea */
+    min-height: 80px;
+  }
+  
+  /* Remove Button Styling */
+  .project-remove-btn {
+    padding: 8px 12px;
+    background-color: #ff4d4d; /* Red color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  /* Certification Entry */
+  .certification-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .certification-entry input {
+    width: calc(33% - 10px);
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .certification-entry input[type="date"] {
+    width: calc(33% - 10px); /* Same width adjustment for date input */
+    margin-right: 10px;
+  }
+  
+  /* Remove Button Styling */
+  .certification-remove-btn {
+    padding: 8px 12px;
+    background-color: #ff4d4d; /* Red color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  /* Button Group Styling */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .button-group button:last-child {
+    margin-right: 0;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .button-group {
+      flex-direction: column;
+    }
+    
+    .button-group button {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    
+    .button-group button:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Resume Display Section */
+  .resume-output {
+    padding: 20px 10%;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    margin-top: 20px;
+  }
+  
+  .resume-output h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #444;
+  }
+  
+  .resume-output p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f4f6f9;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+  }
+  
+  .alert{
+    width: 100%;
+    background: greenyellow(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: none;
+  }
+  
+  
+  /* Language Entry */
+  .language-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .language-entry input {
+    width: calc(50% - 10px); /* Adjusted to fit language and proficiency level */
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Remove Button Styling */
+  .language-remove-btn {
+    padding: 8px 12px;
+    background-color: #ff4d4d; /* Red color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .template-btn {
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .template-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #444;
+  }
+  
+  /* Hide the default file input */
+  #profile-image {
+    display: none;
+  }
+  
+  /* Custom label styled as a button */
+  .custom-file-label {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Primary blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Change color on hover */
+  .custom-file-label:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Styling for displaying file name */
+  #file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Profile Picture Remove Button */
+  .remove-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #dc3545; /* Bootstrap danger color for 'Remove' button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c82333; /* Darker shade on hover */
+  }
+  
+  /* Align profile picture within the card */
+  #preview-image {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 100px; /* Limit size of the image preview */
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #007bff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 10%;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar-menu li {
+    margin-left: 1rem;
+  }
+  
+  .navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-menu a:hover {
+    color: #f0f0f0;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #007bff;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+  
+    .navbar-menu.active {
+      left: 0;
+    }
+  
+    .navbar-menu li {
+      margin: 2.5rem 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+
+
+
+
+
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #0056b3;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-box {
+  flex: 1;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-box h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #333;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #e8f0fe;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+  }
+}
+
+/* Existing styles */
+
+/* Hero section */
+.hero {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Features section */
+.features {
+    padding: 3rem 0;
+}
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.feature-box {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.feature-box h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.feature-box p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Templates section */
+.templates {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    text-align: center;
+}
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.template-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.template-item:hover {
+    transform: translateY(-5px);
+}
+.template-item img {
+    width: 100%;
+    height: auto;
+}
+.template-item h3 {
+    padding: 1rem;
+    margin: 0;
+    background-color: #007bff;
+    color: #fff;
+}

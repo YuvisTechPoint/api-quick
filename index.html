@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Resume - Professional Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add the Lottie player script -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- New spinning loader -->
+    <div id="loader" class="loader"></div>
+
+    <!-- Main content -->
+    <div id="content" style="display: none;">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">Quick Resume</a>
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Create Resume</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>Create Your Professional Resume in Minutes</h1>
+            <p>Quick Resume helps you build a standout resume with our easy-to-use builder and professional templates.</p>
+            <a href="templates.html" class="cta-button">Create Your Resume Now</a>
+        </div>
+
+        <div class="container">
+            <section class="features">
+                <div class="feature-grid">
+                    <div class="feature-box">
+                        <h3>Professional Templates</h3>
+                        <p>Choose from a variety of ATS-friendly templates designed by career experts.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Easy Customization</h3>
+                        <p>Personalize your resume with our intuitive drag-and-drop editor.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Instant Download</h3>
+                        <p>Download your resume in PDF format, ready to send to employers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="templates">
+                <h2>Our Top Resume Templates</h2>
+                <div class="template-grid">
+                    <div class="template-item">
+                        <img src="template1-thumb.jpg" alt="Professional Template">
+                        <h3>Professional</h3>
+                    </div>
+                    <div class="template-item">
+                        <img src="template2-thumb.jpg" alt="Creative Template">
+                        <h3>Creative</h3>
+                    </div>
+                    <div class="template-item">
+                        <img src="template3-thumb.jpg" alt="Executive Template">
+                        <h3>Executive</h3>
+                    </div>
+                </div>
+                <a href="templates.html" class="cta-button" style="margin-top: 2rem;">View All Templates</a>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Quick Resume. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to hide the loader and show the content
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
